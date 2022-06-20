@@ -23,7 +23,7 @@ public class Program {
             int rows1 = st.executeUpdate("UPDATE seller SET BaseSalary = 2090 WHERE DepartmentId = 1");
 
             int x = 1;
-            if (x < 2) {
+            if (x < 4) {
                 throw new SQLException("Fake error");
             }
 
