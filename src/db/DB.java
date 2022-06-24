@@ -15,7 +15,6 @@ public class DB {
                 Properties props = loadProperties();
                 String url = props.getProperty("dburl");
                 conn = DriverManager.getConnection(url, props);
-                System.out.println("Conexão realizada com sucesso!");
             }
             catch (SQLException e) {
                 throw new DbException(e.getMessage());
@@ -45,7 +44,7 @@ public class DB {
         }
     }
 
-    public static void closeStatment (Statement st) {
+    public static void closeStatment(Statement st) {
         if (st != null) {
             try {
                 st.close();
@@ -55,7 +54,7 @@ public class DB {
         }
     }
 
-    public static void closeResultSet (ResultSet rs) {
+    public static void closeResultSet(ResultSet rs) {
         if (rs != null) {
             try {
                 rs.close();
